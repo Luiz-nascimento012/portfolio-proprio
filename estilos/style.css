@@ -25,6 +25,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     background-color: var(--destaque);
@@ -150,30 +151,29 @@ iframe {
 article.skills {
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: center;
 }
-
 
 div.item {
+    margin: 10px;
+}
+
+div.info {
     display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 10px;
-}
-
-div.item label {
-    font-weight: bold;
-    color: var(--destaque);
-}
-
-div.item p {
+    justify-content: space-between;
     font-weight: bold;
 }
+
+div.barra {
+    display: flex;
+    justify-content: center;
+}
+
+
 
 progress {
     appearance: none;
-    width: 200px;
-    height: 21px;
+    width: 90%;
+    height: 15px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -183,6 +183,12 @@ progress::-webkit-progress-value {
     border-radius: 10px;
 }
 
+@media screen and (min-width: 768px) {
+    article.skills {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
 
 
 
