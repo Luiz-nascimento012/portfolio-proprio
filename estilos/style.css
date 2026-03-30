@@ -173,7 +173,7 @@ div.barra {
 progress {
     appearance: none;
     width: 90%;
-    height: 15px;
+    height: 10px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -205,6 +205,47 @@ div.ficha-formacao p {
     font-weight: bold;
 }
 
+div.projetos-container {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    gap: 20px;
+}
+
+div.projeto {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+    background-color: var(--fundo);
+    padding: 10px;
+    border-radius: 10px;
+    border-left: 5px solid var(--destaque);
+}
+
+div.projeto .foto {
+    width: 100%;
+    aspect-ratio: 16/9;object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: var(--destaque);
+    color: var(--texto-segundo);
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: var(--texto-segundo);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: var(--destaque-escuro);
+    transition: color 0.1s;
+}
+
 @media screen and (min-width: 768px) {
 
     header {
@@ -222,25 +263,47 @@ div.ficha-formacao p {
     main {
     display: grid;
     grid-template-columns: auto 30vw 60vw auto;
-    gap: 20px;
     }
 
     main section.ficha {
+        
+        margin-top: 20px;
         position: fixed;
         width: 30vw;
         left: 20px;
     }
 
     main section.ficha h1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     main section.ficha img {
-        width: 80%;
+        width: 60%;
     }
 
     main section.detalhes {
+        margin-top: 20px;
         grid-column: 3;
+    }
+
+    div.projeto {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    div.projeto div.projeto-info {
+        max-width: 80%;
+    }
+
+    div.projeto .foto {
+        aspect-ratio: 1/1;
+        max-width: 20%;
+        max-height: 150px;
+    }
+
+    details > p {
+        text-align: justify;
     }
     
 }
