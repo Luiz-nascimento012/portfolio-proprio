@@ -1,0 +1,72 @@
+
+
+:root {
+    --texto: #222222;
+    --texto-segundo: #ffffff;
+    --fundo-escuro: #111111;
+    --fun-car-escuro: #444444;
+    --destaque-escuro: #ef7512;
+    --des-seg-escuro: #004FE0;
+}
+
+@media screen and (min-width: 768px) {
+
+    header {
+        justify-content: flex-end;
+    }
+
+    article#skills {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    article#skills h2 {
+        grid-column: 1 / -1;
+    }
+
+    main {
+    display: grid;
+    grid-template-columns: auto 30vw 60vw auto;
+    }
+
+    main section#ficha {
+        
+        margin-top: 20px;
+        position: fixed;
+        width: 30vw;
+        left: 20px;
+    }
+
+    main section#ficha h1 {
+        font-size: 1.8em;
+    }
+
+    main section#ficha img {
+        width: 60%;
+    }
+
+    main section.detalhes {
+        margin-top: 20px;
+        grid-column: 3;
+    }
+
+    div.projeto {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    div.projeto div.projeto-info {
+        max-width: 80%;
+    }
+
+    div.projeto .foto {
+        aspect-ratio: 1/1;
+        max-width: 20%;
+        max-height: 150px;
+    }
+
+    details > p {
+        text-align: justify;
+    }
+    
+}
