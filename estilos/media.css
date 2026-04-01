@@ -29,7 +29,6 @@
     }
 
     main section#ficha {
-        
         margin-top: 20px;
         position: fixed;
         width: 30vw;
@@ -68,5 +67,4 @@
     details > p {
         text-align: justify;
     }
-    
 }

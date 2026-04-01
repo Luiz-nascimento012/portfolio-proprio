@@ -12,7 +12,9 @@ botao.addEventListener('click', () => {
 
   if (body.classList.contains('escuro')) {
     localStorage.setItem('tema', 'escuro');
+    botao.innerHTML = '<i class="fa-solid fa-sun"></i>'
   } else {
     localStorage.setItem('tema', 'claro');
+    botao.innerHTML = '<i class="fa-solid fa-moon"></i>'
   }
 });
